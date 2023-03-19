@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "557f3cbc-3a54-4d66-b370-c3db4b2d524c",
+		"name": "kstyle_dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20305944"
+	},
+	"item": [
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Insert_member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"barjafaskan21@gmail.com\",\n    \"gender\":\"0\",\n    \"skintype\":\"minyak\",\n    \"skincolor\":\"White\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/member/insert_member",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"member",
+								"insert_member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll_Member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/getall_member",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"getall_member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_Data_member",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"bagja \",\n    \"gender\":\"0\",\n    \"skintype\":\"kering\",\n    \"skincolor\":\"item\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/update_member/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"update_member",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data member",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/member/get_data_member/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"member",
+								"get_data_member",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4001/member/delete_member/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"member",
+								"delete_member",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder ini Berisikan Reques - Reques dari :\n\n1. Insert member\n2. Get All Mmember\n3. Update Member\n4. Delete Member\n    \n\n- Insert Member\n    \n\nDi Reques Ini Kolom Username Wajib unutk di isi, jika kolom username tidak di isi maka akan muncul eror\n\n- Getall Member\n    \n\nApi ini meng Get data Semua Member\n\n- Update Data\n    \n\nApi ini merubah data member berdasarkan id member yang di jadiakan paramater\n\n- Delete\n    \n\nAoi Ini unutk Mendelete data dari database"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Review_produk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/produk/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"produk",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert_Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"decs_review\":\"produk ini bagus\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4001/product/insert_review/3/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"product",
+								"insert_review",
+								"3",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cek_like_produk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/getlike/2/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"getlike",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like-dislike-produk",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"action\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/ngelike/2/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ngelike",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Dalam Folder ini berisikan reques dari :\n\n1. Get Product Berdasarkan id_product yang berisikan informasi produk , reveiw produk dan jumlah like product\n2. Cek Like Produk yang berisikan untuk mengecek apakah produk itu sudah dilike sama user atau belum\n3. like and dislike, api ini adalah api untuk like dan dislike yang dimana action = 0 adalah unutk unlike dan action = 1 unutk Like\n    \n\n4\\. Insert Review product, ini di gunakan untuk memasukan review dari sebuah produk"
+		}
+	]
+}
